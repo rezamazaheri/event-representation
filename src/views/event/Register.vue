@@ -1,5 +1,6 @@
 <template>
   <p>Register fot the event here.</p>
+  <button @click="register">Register Me</button>
 </template>
 
 <script>
@@ -9,6 +10,13 @@ export default {
     event: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    register() {
+      this.$router.push({
+        name: "EventDetails"
+      })
     }
   }
 }
